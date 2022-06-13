@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32414.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PBKDF1DotNet", "PBKDF1DotNet\PBKDF1DotNet.csproj", "{49DBFFFD-978E-41EB-8C58-2BE6D9D115C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBKDF1DotNetTests", "PBKDF1DotNetTests\PBKDF1DotNetTests.csproj", "{3C8448C0-A449-47C8-938D-0923B3CC8A9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49DBFFFD-978E-41EB-8C58-2BE6D9D115C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49DBFFFD-978E-41EB-8C58-2BE6D9D115C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49DBFFFD-978E-41EB-8C58-2BE6D9D115C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49DBFFFD-978E-41EB-8C58-2BE6D9D115C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C8448C0-A449-47C8-938D-0923B3CC8A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8448C0-A449-47C8-938D-0923B3CC8A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8448C0-A449-47C8-938D-0923B3CC8A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8448C0-A449-47C8-938D-0923B3CC8A9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {868E3EF7-5E18-48F7-9487-10EFF9D465E9}
+	EndGlobalSection
+EndGlobal
