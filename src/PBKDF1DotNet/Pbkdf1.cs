@@ -38,7 +38,7 @@ public static class Pbkdf1
     {
         if (password == null) { throw new ArgumentNullException(nameof(password), $"{nameof(password)} cannot be null."); }
         if (salt == null || salt.Length != SaltSize) { throw new ArgumentOutOfRangeException(nameof(salt), $"{nameof(salt)} must be {SaltSize} bytes long."); }
-        if (iterations < MinIterations) { throw new ArgumentOutOfRangeException(nameof(iterations), $"{nameof(iterations)} must be greater than {MinIterations}."); }
+        if (iterations < MinIterations) { throw new ArgumentOutOfRangeException(nameof(iterations), $"{nameof(iterations)} cannot be less than {MinIterations}."); }
         if (outputSize < MinOutputSize || outputSize > MaxOutputSize) { throw new ArgumentOutOfRangeException(nameof(outputSize), $"{nameof(outputSize)} must be between {MinOutputSize} and {MaxOutputSize} bytes."); }
         var hash = new byte[password.Length + salt.Length];
         Array.Copy(password, hash, password.Length);
