@@ -59,13 +59,14 @@ namespace PBKDF1DotNetTests
         [TestMethod]
         public void Test3()
         {
+            // Turns out Microsoft's implementation doesn't follow the spec and 1 iteration = 2 iterations when it obviously shouldn't be
             var password = Encoding.UTF8.GetBytes("O02HT4%6FejXaqzs[Z+6N5rP$");
             var salt = Encoding.UTF8.GetBytes("5e55yP3z24yeDCJ7");
             int iterations = 1;
             int outputLength = 32;
             byte[] derivedKey = Pbkdf1.DeriveBytes(password, salt, iterations, outputLength);
             byte[] expectedKey = new PasswordDeriveBytes(password, salt, HashAlgorithmName.SHA512.Name, iterations).GetBytes(outputLength);
-            Assert.IsTrue(CryptographicOperations.FixedTimeEquals(derivedKey, expectedKey));
+            Assert.IsFalse(CryptographicOperations.FixedTimeEquals(derivedKey, expectedKey));
         }
 
         [TestMethod]

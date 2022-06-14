@@ -48,10 +48,6 @@ public static class Pbkdf1
         {
             hash = sha512.ComputeHash(hash);
         }
-        if (iterations == 1) { hash = sha512.ComputeHash(hash); }
-        if (hash.Length == outputSize) { return hash; }
-        var derivedKey = new byte[outputSize];
-        Array.Copy(hash, derivedKey, derivedKey.Length);
-        return derivedKey;
+        return hash[..outputSize];
     }
 }
